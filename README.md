@@ -15,7 +15,7 @@ Projeto prático do bootcamp da DIO para estudo de ataques de força bruta em am
 - Simular ataques de força bruta no serviço FTP
 - Automatizar tentativas de login em formulário web (DVWA)
 - Executar password spraying no SMB com enumeração prévia de usuários
-- Documentar comandos, resultados e medidas de mitigação
+- Documentar comandos e resultados
 
 ---
 
