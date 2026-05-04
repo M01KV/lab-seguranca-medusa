@@ -47,17 +47,9 @@ Projeto prático do bootcamp da DIO para estudo de ataques de força bruta em am
 
 ├── README.md
 ├── wordlists/
-│   ├── users.txt         # Wordlist de usuários
-│   └── passwords.txt     # Wordlist de senhas
+│   ├── users.txt
+│   └── passwords.txt
 └── images/
-├── 01_ping.png
-├── 02_nmap_ftp.png
-├── 03_medusa_ftp.png
-├── 04_ftp_validacao.png
-├── 05_dvwa_resultado.png
-├── 06_enum4linux.png
-├── 07_medusa_smb.png
-└── 08_smbclient.png
 
 ---
 
