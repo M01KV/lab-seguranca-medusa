@@ -1,9 +1,7 @@
 # 🔐 Segurança Ofensiva em Ambiente Controlado
 ### Kali Linux + Medusa | Metasploitable 2 + DVWA
 
-![GitHub](https://img.shields.io/badge/Bootcamp-DIO-blue)
-![GitHub](https://img.shields.io/badge/Ferramenta-Medusa-red)
-![GitHub](https://img.shields.io/badge/Ambiente-VirtualBox-lightgrey)
+Bootcamp Cybersegurança Riachuelo (DIO)
 
 > ⚠️ **Aviso Legal:** Todos os testes foram realizados exclusivamente em ambiente virtual isolado (VMs em rede host-only). A reprodução destas técnicas em sistemas sem autorização expressa é crime pela Lei 12.737/2012 e pelo art. 154-A do Código Penal Brasileiro.
 
@@ -159,7 +157,8 @@ enum4linux -U 192.168.56.101
 ```
 **35 usuários enumerados** sem necessidade de credenciais — vulnerabilidade crítica.
 
-![enum4linux](images/06_enum4linux.png)
+![enum4linux](images/0601_enum4linux1.png)
+![enum4linux](images/0602_enum4linux2.png)
 
 ### Ataque (Password Spraying)
 ```bash
@@ -198,34 +197,6 @@ smbclient -L //192.168.56.101 -U msfadmin%msfadmin
 | Força Bruta FTP | FTP | 21 | msfadmin:msfadmin | ✅ Sucesso |
 | Força Bruta Web | HTTP | 80 | admin:password | ✅ Sucesso |
 | Password Spraying | SMB | 445 | msfadmin:msfadmin | ✅ Sucesso |
-
----
-
-## 🛡️ Medidas de Mitigação
-
-### FTP
-- Instalar e configurar **Fail2Ban** para bloquear IPs após tentativas falhas
-- Substituir FTP por **SFTP** (protocolo seguro com criptografia)
-- Restringir acesso por IP via firewall
-- Desativar login por senha e usar **autenticação por chave RSA**
-
-### Formulários Web
-- Implementar **CAPTCHA** após falhas consecutivas
-- Limitar tentativas de login por IP (**rate limiting**)
-- Habilitar **MFA/2FA** (autenticação multifator)
-- Monitorar logs com **SIEM/IDS** para detectar padrões de brute force
-
-### SMB
-- **Desativar SMBv1** — protocolo legado e inseguro
-- Bloquear portas **139/445** no firewall externo
-- Restringir SMB à **VLAN interna** (segmentação de rede)
-- Política de senhas forte: mínimo 14 caracteres, sem padrões previsíveis
-
-### Geral
-- Configurar **PAM** com `pam_faillock` para bloqueio automático de contas
-- Centralizar logs em **SIEM** (Wazuh, Elastic, Splunk)
-- Revisar periodicamente usuários ativos e desativar contas desnecessárias
-- Aplicar o princípio do **menor privilégio**
 
 ---
 
